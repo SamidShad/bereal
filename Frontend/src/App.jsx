@@ -15,6 +15,7 @@ import SignUp from "./pages/SignUp";
 import SignIn from "./pages/SignIn";
 import CardAlert from "./components/Alerts/CardAlert";
 import CommentPage from "./components/Comments/CommentPage";
+import BottomBar from "./components/Navbar/BottomBar";
 
 function Layout({ left, right, children }) {
   return (
@@ -54,6 +55,7 @@ function App() {
           element={
             <Layout left={true} right={true}>
               <Posts />
+              <BottomBar />
             </Layout>
           }
         />
@@ -62,6 +64,7 @@ function App() {
           element={
             <Layout left={true} right={false}>
               <Explore />
+              <BottomBar />
             </Layout>
           }
         />
@@ -70,6 +73,7 @@ function App() {
           element={
             <Layout left={true} right={false}>
               <Search />
+              <BottomBar />
             </Layout>
           }
         />
@@ -78,6 +82,7 @@ function App() {
           element={
             <Layout left={true} right={false}>
               <Profile />
+              <BottomBar />
             </Layout>
           }
         />
@@ -87,6 +92,7 @@ function App() {
           element={
             <Layout left={false} right={false}>
               <SignUp />
+              <BottomBar />
             </Layout>
           }
         />
@@ -95,6 +101,7 @@ function App() {
           element={
             <Layout left={false} right={false}>
               <SignIn />
+              <BottomBar />
             </Layout>
           }
         />
@@ -104,6 +111,7 @@ function App() {
           element={
             <Layout left={true} right={false}>
               <ErrorPage />
+              <BottomBar />
             </Layout>
           }
         />
@@ -112,6 +120,7 @@ function App() {
           element={
             <Layout left={true} right={false}>
               <Profile />
+              <BottomBar />
             </Layout>
           }
         />
