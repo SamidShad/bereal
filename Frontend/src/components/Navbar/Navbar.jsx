@@ -11,7 +11,6 @@ function Navbar() {
           </h1>
         </nav>
       </div>
-      <BottomBar />
       <CreatePost />
     </>
   );
