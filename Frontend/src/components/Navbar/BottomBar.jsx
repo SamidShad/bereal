@@ -2,6 +2,7 @@ import { FaHome, FaMap, FaSearch, FaPlus, FaUser } from "react-icons/fa";
 import { updateData } from "../../store/slices/postModalSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { showCard } from "../../store/slices/alertSlice";
+import { Link } from "react-router-dom";
 
 function BottomBar() {
   const dispatch = useDispatch();
@@ -22,30 +23,30 @@ function BottomBar() {
         <div className="lg:hidden w-[100%] flex justify-center items-center fixed bottom-0 z-[12]">
           <nav className="flex items-center justify-center backdrop-blur-sm bg-black/80 w-[100%] text-white m-2 rounded-md p-3 shadow-md">
             <ul className="flex justify-around w-[100%]">
-              <a href="/">
+              <Link to="/">
                 <li>
                   <FaHome className="text-2xl md:text-4xl hover:text-blue-700" />
                 </li>
-              </a>
-              <a href="/explore">
+              </Link>
+              <Link to="/explore">
                 <li>
                   <FaMap className="text-2xl md:text-4xl hover:text-blue-700" />
                 </li>
-              </a>
+              </Link>
               <li className="cursor-pointer" onClick={createFuncAuthCheck}>
                 <FaPlus className="text-2xl md:text-4xl hover:text-blue-700" />
               </li>
-              <a href="/search">
+              <Link to="/search">
                 <li>
                   <FaSearch className="text-2xl md:text-4xl hover:text-blue-700" />
                 </li>
-              </a>
+              </Link>
               {user?.token !== null && (
-                <a href={`/profile/${user.userName}`}>
+                <Link to={`/profile/${user.userName}`}>
                   <li>
                     <FaUser className="text-2xl md:text-4xl hover:text-blue-700" />
                   </li>
-                </a>
+                </Link>
               )}
             </ul>
           </nav>
