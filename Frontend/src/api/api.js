@@ -1,5 +1,5 @@
 import axios from "axios";
-const API_url = "http://localhost:8002/api";
+const API_url = "https://berealapi.vercel.app/api";
 
 const token = localStorage.getItem("userToken")
   ? JSON.parse(localStorage.getItem("userToken"))?.token
